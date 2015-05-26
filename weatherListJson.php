@@ -28,7 +28,7 @@ if(!$db){
    }
 */
 
-//$results = $db->query('SELECT * FROM (SELECT * FROM archive ORDER BY dateTime  DESC LIMIT ' . $limit . ' OFFSET ' . $offset . ' )ORDER BY dateTime ASC');
+//toggle between detailed query if less than 9 days or return max temp if longer date range.
 if ($endDay < 9) {
 	$results = $db->query("select * from archive WHERE datetime > strftime('%s','now', '-" . $endDay . " day') 
 			AND datetime < strftime('%s','now', '-" . $startDay ." day') ");
