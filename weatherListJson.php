@@ -2,7 +2,6 @@
 /*****************************
 *JSON web service
 *parameters: startDay and dayOffset
-*
 ******************************/
 //echo phpinfo();
  header("Access-Control-Allow-Origin: *");
