@@ -30,13 +30,14 @@ if(!$db){
 
 //$results = $db->query('SELECT * FROM (SELECT * FROM archive ORDER BY dateTime  DESC LIMIT ' . $limit . ' OFFSET ' . $offset . ' )ORDER BY dateTime ASC');
 if ($endDay < 9) {
-$results = $db->query("select * from archive WHERE datetime > strftime('%s','now', '-" . $endDay . " day') 
-AND datetime < strftime('%s','now', '-" . $startDay ." day') ");
+	$results = $db->query("select * from archive WHERE datetime > strftime('%s','now', '-" . $endDay . " day') 
+			AND datetime < strftime('%s','now', '-" . $startDay ." day') ");
 } else {
-$results = $db->query("select dateTime, windSpeed, max(windGust) as windGust, max(outTemp) as outTemp from archive WHERE datetime > strftime('%s','now', '-" . $endDay . " day') 
-AND datetime < strftime('%s','now', '-" . $startDay ." day') GROUP BY date(datetime,'unixepoch','localtime') ");
-
+	$results = $db->query("select dateTime, windSpeed, max(windGust) as windGust, max(outTemp) as outTemp from archive
+		 WHERE datetime > strftime('%s','now', '-" . $endDay . " day') 
+		AND datetime < strftime('%s','now', '-" . $startDay ." day') GROUP BY date(datetime,'unixepoch','localtime') ");
 }
+
 while ($row = $results->fetchArray()) {
 //    var_dump($row);
 
