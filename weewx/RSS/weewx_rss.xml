@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<rss version="2.0" 
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#" >
+   <channel>
+      <title>Belmont, CA, Weather Conditions</title>
+      <link>http://www.weewx.com</link>
+      <description>Current conditions, and daily, monthly, and yearly summaries</description>
+      <language>en-us</language>
+      <pubDate>Mon, 25 May 2015 17:00:00 PDT</pubDate>
+
+      <lastBuildDate>Mon, 25 May 2015 17:00:00 PDT</lastBuildDate>
+      <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+      <generator>weewx 2.4.0</generator>
+      <ttl>10</ttl>
+      
+      <item>
+         <title>Weather Conditions at 25-May-2015 17:00</title>
+         <link>http://www.weewx.com/index.html</link>
+         <description>
+           Outside temperature: 16.0&#176;C; 
+           Barometer: 29.725 inHg; 
+           Wind: 12 mph from 247&#176;; 
+           Rain rate: 0.00 in/hr; 
+           Inside temperature: 21.1&#176;C
+         </description>
+         <pubDate>Mon, 25 May 2015 17:00:00 PDT</pubDate>
+	     <geo:lat>37.515642</geo:lat>
+    	 <geo:long>-122.295338</geo:long>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Time:                25-May-2015 17:00<br/>
+             Outside Temperature: 16.0&#176;C<br/>
+             Inside Temperature:  21.1&#176;C<br/>
+             Wind Chill:          16.0&#176;C<br/>
+             Heat Index:          16.0&#176;C<br/>
+             Dewpoint:            11.7&#176;C<br/>
+             Humidity:            75%<br/>
+             Barometer:           29.725 inHg<br/>
+             Wind:                12 mph from 247&#176;<br/>
+             Rain Rate:           0.00 in/hr<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Daily Weather Summary as of 25-May-2015 17:00</title>
+         <link>http://www.weewx.com/index.html</link>
+         <description>
+	        Min outside temperature: 11.1&#176;C at 06:23;
+         	Max outside temperature: 18.0&#176;C at 14:47;
+	        Min inside temperature:  19.9&#176;C at 07:53;
+	        Max inside temperature:  21.6&#176;C at 00:00;
+	        Min barometer:           29.720 inHg at 16:59;
+	        Max barometer:           29.773 inHg at 12:59;
+            Max wind :               33 mph from 270&#176; at 15:31;
+            Rain today:              0.00 in
+         </description>
+         <pubDate>Mon, 25 May 2015 17:00:00 PDT</pubDate>
+	     <geo:lat>37.515642</geo:lat>
+    	 <geo:long>-122.295338</geo:long>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Day:                     25 May 2015<br/>
+	         Min Outside Temperature: 11.1&#176;C at 06:23<br/>
+	         Max Outside Temperature: 18.0&#176;C at 14:47<br/>
+	         Min Inside Temperature:  19.9&#176;C at 07:53<br/>
+	         Max Inside Temperature:  21.6&#176;C at 00:00<br/>
+	         Min Barometer:           29.720 inHg at 16:59<br/>
+	         Max Barometer:           29.773 inHg at 12:59<br/>
+             Max Wind :               33 mph from 270&#176; at 15:31<br/>
+             Rain today:              0.00 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Monthly Weather Summary as of 25-May-2015 17:00</title>
+         <link>http://www.weewx.com/month.html</link>
+         <description>
+	        Min outside temperature: 8.1&#176;C at 12-May-2015 09:51;
+         	Max outside temperature: 27.3&#176;C at 01-May-2015 11:31;
+	        Min inside temperature:  -40.0&#176;C at 02-May-2015 14:09;
+	        Max inside temperature:  25.0&#176;C at 01-May-2015 00:00;
+	        Min barometer:           29.522 inHg at 07-May-2015 16:58;
+	        Max barometer:           29.914 inHg at 15-May-2015 06:11;
+            Max wind :               35 mph from 270&#176; at 12-May-2015 14:15;
+            Rain total for month:    0.02 in
+         </description>
+         <pubDate>Mon, 25 May 2015 17:00:00 PDT</pubDate>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Month:                   May 2015<br/>
+	         Max Outside Temperature: 27.3&#176;C at 01-May-2015 11:31<br/>
+	         Min Outside Temperature: 8.1&#176;C at 12-May-2015 09:51<br/>
+	         Max Inside Temperature:  25.0&#176;C at 01-May-2015 00:00<br/>
+	         Min Inside Temperature:  -40.0&#176;C at 02-May-2015 14:09<br/>
+	         Min Barometer:           29.522 inHg at 07-May-2015 16:58<br/>
+	         Max Barometer:           29.914 inHg at 15-May-2015 06:11<br/>
+             Max Wind :               35 mph from 270&#176; at 12-May-2015 14:15<br/>
+             Rain total for month:    0.02 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+      <item>
+         <title>Yearly Weather Summary as of 25-May-2015 17:00</title>
+         <link>http://www.weewx.com/year.html</link>
+         <description>
+	        Min outside temperature: 0.7&#176;C at 02-Jan-2015 05:59;
+         	Max outside temperature: 33.5&#176;C at 30-Apr-2015 16:18;
+	        Min inside temperature:  -40.0&#176;C at 04-Mar-2015 07:49;
+	        Max inside temperature:  26.6&#176;C at 30-Apr-2015 18:35;
+	        Min barometer:           29.522 inHg at 07-May-2015 16:58;
+	        Max barometer:           30.208 inHg at 04-Jan-2015 09:28;
+            Max wind :               45 mph from 180&#176; at 06-Feb-2015 18:59;
+            Rain total for year:     5.10 in
+         </description>
+         <pubDate>Mon, 25 May 2015 17:00:00 PDT</pubDate>
+ 		 <content:encoded><![CDATA[
+           <p>
+             Year:                    2015<br/>
+	         Max Outside Temperature: 33.5&#176;C at 30-Apr-2015 16:18<br/>
+	         Min Outside Temperature: 0.7&#176;C at 02-Jan-2015 05:59<br/>
+	         Max Inside Temperature:  26.6&#176;C at 30-Apr-2015 18:35<br/>
+	         Min Inside Temperature:  -40.0&#176;C at 04-Mar-2015 07:49<br/>
+	         Min Barometer:           29.522 inHg at 07-May-2015 16:58<br/>
+	         Max Barometer:           30.208 inHg at 04-Jan-2015 09:28<br/>
+             Max Wind :               45 mph from 180&#176; at 06-Feb-2015 18:59<br/>
+             Rain total for year:     5.10 in<br/>
+        </p>
+      ]]></content:encoded>
+      </item>
+
+   </channel>
+</rss>

@@ -1,0 +1,112 @@
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/vis.js"></script>
+  <link href="js/vis.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h2>Weather</h2>
+ <div class="temp" style="font-size: 20px;">0</div>
+
+<div id="visualization"></div>
+    
+<span class="label">Number of days to show:</span><input id="count" value="1">
+<input id="draw" type="button" value="draw" style="width:100px;"> <span id="description"></span>
+<br />
+<span class="label">Start how many days back:</span><input id="daysBack" value="0">
+
+
+<script type="text/javascript">
+
+  	
+	
+    var names = ['wind', 'temp', 'uniform', 'disabled'];
+    
+    var groups = new vis.DataSet();
+    groups.add({
+        id: 0,
+        content: names[0],
+        options: {
+            drawPoints: false,
+                     catmullRom: {
+                parametrization: 'uniform'
+            }
+            
+        }});
+
+    groups.add({
+        id: 1,
+        content: names[1],
+        options: {
+            drawPoints: false,
+            catmullRom: {
+                parametrization: 'chordal'
+            }
+        }});	
+    
+var options = {
+        dataPoints: false,
+        dataAxis: {visible: true},
+        legend: true,
+        width:  window.innerWidth,
+        height: '400px',
+        yAxisOrientation: 'right', // right, left
+        legend: {left:{position:"bottom-left"}},        
+ };    
+    
+var dataset = new vis.DataSet();
+var container = document.getElementById('visualization');
+    	
+var itemsGust = [];
+var itemsTemp =[];
+var flickerAPI = "http://vltavsky.com:500/weatherListJson.php";
+var graph2d ;
+
+
+(function() {
+  clearData();
+
+})();
+        
+        
+document.getElementById('draw').onclick = clearData;
+    
+function clearData() {
+    dataset.clear();
+    itemsGust = [];
+    itemsTemp = [];
+    
+    
+  $.getJSON( flickerAPI, {
+    startDay: document.getElementById('daysBack').value,  
+    dayOffset: document.getElementById('count').value  
+  })
+    .done(function( data ) {
+      $.each( data, function( i, item ) {
+        //console.log(i+" : "+ item.windGust + ":" + item.date); 
+          itemsGust.push({x: item.date, y: item.windGust, group: 0});
+          itemsTemp.push({x: item.date, y: item.outTemp, group: 1});
+         $( "div.temp" ).html( "Temp: " + item.outTemp.toFixed(1) 
+                        + " C   Wind: " + item.windGust  + " mph");
+         // $( "div.wind" ).html( "Wind: " + item.windGust );
+      }); //each
+	
+      dataset.add(itemsGust);
+      dataset.add(itemsTemp);
+      
+        
+   
+    if (graph2d != null)   
+      graph2d.destroy();
+     graph2d = new vis.Graph2d(container, dataset, groups, options);
+       
+      
+    });        
+}
+</script>
+</body>
+</html>

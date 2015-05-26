@@ -1,0 +1,12 @@
+<?php
+$con=mysqli_connect("localhost","root","password","test");
+
+$result = mysqli_query($con,"SELECT * FROM weather  ORDER BY time DESC limit 20");
+
+$row = mysqli_fetch_array($result);
+
+echo "" . $row['temp'] . "";
+
+mysqli_close($con);
+?>
+

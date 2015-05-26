@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head profile="http://www.w3.org/2005/10/profile">
+    <title>Belmont, CA Yearly weather summary</title>
+    <link rel="stylesheet" type="text/css" href="weewx.css"/>
+    <link rel="icon" type="image/png" href="favicon.ico" />
+    <script type="text/javascript">
+      function openURL(urlname)
+      {
+      window.location=urlname;
+      }
+    </script>
+
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="masthead">
+        <h1>Belmont, CA</h1>
+        <h2>Yearly Weather Summary</h2>
+          <h2>25-May-2015 17:00</h2>
+      </div>
+
+      <div id="stats_group">
+
+        <div class="stats">
+          <div class="stats_header">
+            Calendar Year
+          </div>
+
+          <table>
+            <tbody>
+              <tr>
+                <td class="stats_label">
+                  High Temperature<br/>
+                  Low Temperature
+                </td>
+                <td class="stats_data">
+                  33.5&#176;C at 30-Apr-2015 16:18<br/>
+                  0.7&#176;C at 02-Jan-2015 05:59
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Heat Index
+                </td>
+                <td class="stats_data"> 
+                  33.5&#176;C at 30-Apr-2015 16:18
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label"> 
+                  Low Wind Chill
+                </td>
+                <td class="stats_data"> 
+                  0.7&#176;C at 02-Jan-2015 05:59
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Humidity<br/>
+                  Low Humidity
+                </td>
+                <td class="stats_data">
+                  99% 02-Jan-2015 04:35<br/>
+                  10% 15-Jan-2015 07:59
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Dewpoint<br/>
+                  Low Dewpoint
+                </td>
+                <td class="stats_data">
+                  19.5&#176;C 07-Feb-2015 13:35<br/>
+                  -22.3&#176;C 15-Jan-2015 07:59
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Barometer<br/>
+                  Low Barometer
+                </td>
+                <td class="stats_data">
+                  30.208 inHg at 04-Jan-2015 09:28<br/>
+                  29.522 inHg at 07-May-2015 16:58
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  Rain Total
+                </td>
+                <td class="stats_data">
+                  5.10 in
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label"> 
+                  High Rain Rate
+                </td>
+                <td class="stats_data">
+                  9.21 in/hr at 27-Mar-2015 10:04
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Wind Speed
+                </td>
+                <td class="stats_data">
+                  45 mph from 180&#176; at 06-Feb-2015 18:59
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  Average Wind
+                </td>
+                <td class="stats_data">
+                  3 mph
+                </td>
+              </td>
+              
+              <tr>
+                <td class="stats_label">
+                  RMS Wind
+                </td>
+                <td class="stats_data">
+                  5 mph
+                </td>
+              </tr>
+
+              <tr>
+                <td class="stats_label">
+                  Vector Average Speed<br/>
+                  Vector Average Direction
+                </td>
+                <td class="stats_data">
+                  2 mph<br/>
+                  259&#176;
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label">
+                  High Inside Temperature<br/>
+                  Low Inside Temperature
+                </td>
+                <td class="stats_data">
+                  26.6&#176;C at 30-Apr-2015 18:35<br/>
+                  -40.0&#176;C at 04-Mar-2015 07:49
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- End class "stats" -->
+
+        <p>&nbsp;</p>
+
+        <div class="stats">
+          <div class="stats_header">
+            Rain Year (1-Oct start)
+          </div>
+          <table>
+            <tbody>
+              <tr>
+                <td class="stats_label">
+                  Rain Year Total
+                </td>
+                <td class="stats_data">
+                  17.17 in
+                </td>
+              </tr>
+              <tr>
+                <td class="stats_label"> 
+                  High Rain Rate
+                </td>
+                <td class="stats_data">
+                  9.21 in/hr at 27-Mar-2015 10:04
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div> <!-- End class "stats" -->
+
+      </div> <!-- End class "stats_group" -->
+
+      <div id="content">
+        
+        <div class="header">
+          <h3>Yearly Statistics and Plots</h3>
+        </div>
+        <div id="plots">
+          <img src="yeartempdew.png" alt="temperatures" />
+          <img src="yeartempchill.png" alt="heatchill" />
+          <img src="yearhilow.png" alt="Yearly high/low" />
+          <img src="yearrain.png" alt="rain" />
+          <img src="yearwind.png" alt="wind" />
+          <img src="yearbarometer.png" alt="barometer"/>
+          <img src="yearwinddir.png" alt="Hi Wind" />
+          <img src="yearinside.png" alt="Inside" />
+          <img src="yearwindvec.png" alt="Wind Vector" />
+        </div>
+      </div> <!-- End id "content" -->
+
+      <div id="navbar">
+        <input type="button" value="   Current   " onclick="openURL('index.html')" />
+        <input type="button" value="    Week     " onclick="openURL('week.html')" />
+        <input type="button" value="    Month    " onclick="openURL('month.html')" />
+        <input type="button" value="    Year     " onclick="openURL('year.html')" />
+      </div>
+    </div> <!-- End id "container" -->
+
+
+  </body>
+</html>
+

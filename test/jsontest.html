@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery.getJSON demo</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  </style>
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+ 
+<div id="images"></div>
+ 
+<script>
+  var flickerAPI = "js.php";
+  $.getJSON(flickerAPI,function(result){
+console.log(result);
+});
+</script>
+</html>

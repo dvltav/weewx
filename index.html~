@@ -1,0 +1,8 @@
+<html><body><h1>Raspbery PI Apache Server!</h1>
+
+<p><a href="weewx/mobile.php">mobile weather</a></p>
+<p><a href="weewx"> weather</a></p>
+<p><a href="form.php">form</a></p>
+<p><a href="cim.php">cim</a></p>
+<p><a href="list.php">list</a></p>
+</body></html>

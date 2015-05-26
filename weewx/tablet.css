@@ -1,0 +1,74 @@
+
+/*
+ * $Revision: 322 $
+ * $Date: 2011-01-17 13:37:37 -0500 (Mon, 17 Jan 2011) $
+ */
+  
+/* weewx mobile CSS settings */
+
+/* Global */
+
+body {
+	background-color: #000000;
+	font-family: helvetica, arial;
+	text-align: center;
+}	
+
+a {
+	text-decoration: none;
+	color: black;
+}
+p.data {
+        text-align: center;
+        color: #D9D9D8;
+        font-size: 30px;
+
+}
+table.readings {
+	font-size: 13px;
+	width: 100%;
+	border: none;
+	border-collapse: collapse;
+}
+
+tr.alt {
+	background-color: #4E4E3F;
+}
+
+td {
+	text-align: right;
+	font-weight: 600;
+	border: none;
+	width: 50%;
+	padding: 2px;
+}
+
+td.data {
+	text-align: center;
+	color: #D9D9D8;
+	font-size: 30px;
+	
+}
+td.dataBig {
+	text-align: center;
+	color: #D9D9D8;
+	font-size: 300px;
+	font-weight:bold;
+}
+
+td.dataBigWind {
+        text-align: center;
+        color: #D9D9D8;
+        font-size: 275px;
+        font-weight:bold;
+}
+
+div.radar {
+}
+
+img {
+	width: 301px;
+	border: 2px solid black;
+}
+
+
