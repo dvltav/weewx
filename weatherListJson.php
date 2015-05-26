@@ -4,7 +4,9 @@
 *parameters: startDay and dayOffset
 ******************************/
 //echo phpinfo();
- header("Access-Control-Allow-Origin: *");
+
+header("Access-Control-Allow-Origin: *");
+
 function printRow($data) {
   echo "<td>", $data, "</td>";
   }
