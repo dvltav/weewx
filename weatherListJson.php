@@ -45,12 +45,12 @@ if ($endDay < 9) {
 while ($row = $results->fetchArray()) {
 //    var_dump($row);
 
-     $date = date("Y/m/d g:i a",$row["dateTime"]);
+	$date = date("Y/m/d g:i a",$row["dateTime"]);
 	//$date = date("g:i",$row["dateTime"]);
-      $outTemp =  round(f2c($row["outTemp"]),2);
-      $windSpeed =  round($row["windSpeed"]);
-      $windGust = round($row["windGust"]);
-//    echo $windGust,", "; 
+	$outTemp =  round(f2c($row["outTemp"]),2);
+	$windSpeed =  round($row["windSpeed"]);
+	$windGust = round($row["windGust"]);
+	//    echo $windGust,", "; 
 	$returnValue[] = array("date"=>$date, "outTemp"=>$outTemp, "windGust"=>$windGust);
 }
 	// Send back request in JSON format
