@@ -14,8 +14,6 @@ function f2c($f) {
   return ((5/9)*($f-32));
 }
 $offset = 1;
-//$offset = $_REQUEST["offset"];
-//$limit = $_REQUEST["limit"];
 $startDay = $_REQUEST["startDay"];
 $endDay = $startDay + $_REQUEST["dayOffset"];
 $i = 0;
