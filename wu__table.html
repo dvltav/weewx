@@ -1,0 +1,23 @@
+<HTML>
+	<table style="width:100%" id="table">
+
+	</table>
+	<p id="demo" onclick="myFunction()"></p>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+<script>
+
+function addRow(stations_name, temp_f, rain_today) {
+
+	var table = document.getElementById("table");
+	var row = table.insertRow(0);
+
+
+    var text = document.createTextNode(stations_name);
+    var cell = row.insertCell(0);
+    cell.setAttribute('align','center')
+    cell.appendChild(text);
+    document.getElementById("outputDiv").appendChild(table);
+}
+
+</script>
+</HTML>
