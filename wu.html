@@ -1,0 +1,151 @@
+
+<HTML>
+	<head>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	</head>
+<div class="container">
+	<table style="width:100%" class="table table-striped">
+		<thead>
+		<tr> 
+			<th>Station</th>
+			<th>Temp</th>
+			<th>Gust</th>
+			<th>Rain</th>
+		</tr>
+	</thead>
+	<tbody id="table">
+	</tbody>
+	</table>
+</div>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<script>
+
+var stations = ["KCABELMO3", "KCABELMO31", "KCABELMO12", "KCABELMO30", "KCABELMO29"];
+
+var i = 0;
+
+var execute = true;
+
+while (stations[i]) {
+	
+	   city_i = stations[i];
+		
+		  $.ajax({	
+		  url : url(city_i),
+		  dataType : "jsonp",
+		  success : function(parsed_json) {
+		  //var location = parsed_json['location']['city'];
+		  temp_c = parsed_json['current_observation']['temp_c'];
+		  rain_today = parsed_json['current_observation']['precip_today_in']; 
+		  station_id = parsed_json['current_observation']['station_id']; 
+		  stations_name = parsed_json['current_observation']['observation_location']['city'].split(",")[0];
+		  gust = station_id = parsed_json['current_observation']['wind_gust_mph'];
+		  //console.log(parsed_json);
+		  new weather(station_id, stations_name, temp_c, rain_today, gust)
+		  addRow(stations_name, temp_c, rain_today, gust);
+		    }
+		  });
+		
+		console.log("city_i " + city_i + "i = " + i++);
+		//sleep(1000);
+
+
+} // while
+history();
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $(".other").hide();
+    });
+    $("#show").click(function(){
+        $(".other").show();
+    });
+   });
+
+//end
+
+function history() {
+
+		  $.ajax({	
+		  url : urlHistory("20151118"),
+		  dataType : "jsonp",
+		  success : function(parsed_json) {
+		  	data = parsed_json['history']['observations'];
+		  	console.log(data);
+		  	date = new Date();
+		  	hour = date.getHours();
+		  	minute = Math.floor(date.getMinutes());
+
+		  	while(data[i]) {
+
+		  		m = Math.floor(data[i].date.min);
+		  		h = data[i].date.hour;
+		  		if (hour == h) {
+		  			if (m > minute) {
+		  				console.log(data[i]);
+		  				addRow("Yesterday", data[i].tempm, data[i].precip_totali, data[i].wgustm);
+		  				i = data.lenght;
+		  			}
+		  		}
+		  		i++;
+		  	}
+		  		    }
+		  });
+
+}
+
+function weather(station_id, station_name, temp_c, rain, gust) {
+	this.station_id = station_id;
+	this.station_name = station_name;
+	this.temp_c = this.temp_c;
+	this.rain = rain;
+	this.gust = gust;
+
+}
+
+function addRow(station_name, temp_f, rain_today, gust) {
+
+	var table = document.getElementById("table");
+	var row = table.insertRow(-1);
+	if (station_name != "Alden" && station_name != "Yesterday") {
+    	row.setAttribute('class','other');
+	}
+	addCell(row, rain_today);
+	addCell(row, gust);
+	addCell(row, temp_f);
+	addCell(row, station_name);
+	$(".other").hide();
+}
+
+function addCell(row, value) {
+    text = document.createTextNode(value);
+    cell = row.insertCell(0);
+    cell.setAttribute('align','left');
+    cell.appendChild(text);
+}
+
+function myFunction() {
+    document.getElementById("demo").innerHTML = "temp is " + temp_f + " rain";
+}
+
+function urlHistory(date) {
+	return "http://api.wunderground.com/api/735c0991d72abce8/yesterday/q/pws:KCABELMO31.json"
+}
+
+function url(city) {
+	//http://api.wunderground.com/api/735c0991d72abce8/conditions/q/pws:KCABELMO31.json
+	// history http://api.wunderground.com/api/735c0991d72abce8/history_20151118/q/pws:KCABELMO31.json
+	// KV http://api.wunderground.com/api/735c0991d72abce8/conditions/q/zmw:00000.3.11414.json
+	//"http://api.wunderground.com/api/735c0991d72abce8/geolookup/conditions/q/IA/Cedar_Rapids.json",
+
+	console.log( "city =" + city );
+	return "http://api.wunderground.com/api/735c0991d72abce8/conditions/q/pws:" + city + ".json";
+}
+
+
+</script>
+</HTML>
